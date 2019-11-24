@@ -83,7 +83,7 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">ANSYS Thermal analysis of a Sintering furnace</a></h2>
+										<h2><a href="#">ANSYS Thermal analysis of a High-Temperature Sintering furnace</a></h2>
 										<p>Analysis done during the design of a vacuum-rated sintering porcess setup to ensure that the O-ring sealing mechanism would survive the thermal environment.</p>
 									</div>
 									<div class="meta">
@@ -91,14 +91,15 @@
 										<a href="#" class="author"><span class="name">Prabhat</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="images/ansys thermal.jpg" alt="" /></span>
 								<p>As part of our Senior design project at Pitt, we were tasked with creating a setup for a high-temperature sintering furnace that would hold the sample in the middle of the furnace while allowing a vacuum to be pulled, and the atmosphere around the sample to be purged with Argon. To achieve the vacuum seal, we designed a dual-O-ring sealing mechanism illustrated below.</p>
 								<span class="image featured"><img src="images/sealing mechanism.JPG" alt="" /></span>
-								<p>To ensure that the O-rings wouldn't melt when the furnace reached temperatures of up to 1400C, I carried out a simulatin in ANSYS Workbench to model the expected operating thermal condition of the furnace. </p>
+								<p>To ensure that the O-rings wouldn't melt when the furnace reached temperatures of up to 1400C, I carried out a simulatin in ANSYS Workbench to model the expected operating thermal condition of the furnace. The end goal was to determine the minimum convection film coefficient (h) that would be needed to dissipate enough heat that the O-rings would survive.</p>
 								<span class="image featured"><img src="images/ansys thermal loads.jpg" alt="" /></span>
-								<p>Loads applied:</p>
-								<p>Results:</p>
-
+								<p>To model the thermal loads, I started with a constant-temperature boundary condition on a section of the tube furnace, where we knew the maximum temperature was going to be. This would be conducted through the alumina tube of the furnace towards the end caps. Several convective loads were applied, including one on the outside of the quartz tube that holds the sample. A block of alumina would protect the end cap from the radiative loads from the center, so it was determined that the radiation load would not need to be modeled.</p>
+								<p>After several iterations and adjustments to the problem setup, I was satisfied with the final model as it was as close to the actual operating condition as possible. The solution was carried out and special attention was paid to the temperatures around where the O-rings would be, along with the temperature on the outside of the endcap, since this could be a burn hazard.</p>
+								<span class="image featured"><img src="images/ansys thermal.jpg" alt="" /></span>
+								<p>The results were promising, albeit rather close to the temperature limit. The maximum temperature at the O-ring location was calculated to be around 190C, which is below the melting point of the silicone O-rings. </p>
+								<p>Ultimately, only testing would prove without a doubt that the O-rings could hold a vacuum without melting during a real sintering cycle. So we ran a sintering cycle that lasted 8 hours, simulating the sintering of a sample of Nickel-Manganese-Gallium, and found that the O-rings held the vacuum and survived the ordeal. The final design was a success.</p>
 							</article>
 
 					</div>

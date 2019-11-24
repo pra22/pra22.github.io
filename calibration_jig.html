@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Hackaday and Hackster featured my project</title>
+		<title>Calibration device</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -83,21 +83,22 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">Hackaday blog and Hackster.io featured my project!</a></h2>
-										<p>The GC-01, aka the precursor to the commercial GC-20.</p>
+										<h2><a href="#">Design of a calibration device for the measurement of radiation doses</a></h2>
+										<p>A homemade calibration device that quite adequately replaces a professional unit for my limited use case.</p>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2019-09-25">September 25, 2019</time>
 										<a href="#" class="author"><span class="name">Prabhat</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="images/hackaday_article.png" alt="" /></span>
-								<p>I posted an instructable about the original GC-01 Geiger counter, which apparently got popular enough that the editors of these two popular maker blogs found it! </p>
-								<p>The GC-01 was much larger, shaped differently, and didn't have things like data logging and wifi, but it was my first attempt at building a handheld device, and taught me a lot about PCB design, schematic capture, and most importantly, the design and dimensioning of a product case.</p>
-								<p>Here is the link to the <a href="https://hackaday.com/2019/08/19/diy-geiger-counter-is-sure-to-generate-clicks/">Hackaday article</a></p>
-								<p>And here is the <a href="https://www.hackster.io/news/diy-geiger-counter-with-esp8266-e8fc26f72c31">hackster.io blog post!</a></p>
+								<p>When I made my first Geiger counter, I used the officially published values for the sensitivity of the Soviet-era SBM-20 Geiger-Muller tubes I used for the detection of ionizing particles. One problem with this approach is that I would not accurately know the sensitivity of each individual tube, and since these tubes were quite old, having been manufactured in the Soviet era, so there was expectation of some random variability. </p>
+								<span class="image featured"><img src="images/calibration cover.jpg" alt="" /></span>
+								<p>To more accurately determine the sensitivity, or specifically the counts-per-minute value detected by the tube per unit of effective absorbed dose, I decided to design and make my own calibration jig. I had a standard disk source with a known quantity of the radioactive Cesium-137 isotope, and could use some formulas or an online calculator to find the expected dose rate of gamma radiation at a given distance from the source.</p>
+								<span class="image featured"><img src="images/calibration.jpg" alt="" /></span>
+								<p>The design includes a holder for the disc source that maintains the sample at a known height and orientation, and on the other end, it holds the Geiger tube at a fixed center-to-center distance. By measuring the total number of counts over a period of 10 minutes, a fairly accurate measurement of the counts per minute could be deduced. It also includes a mounting slot for a beta-particle shield to ensure that only the gamma emissions from the isotope sample make it to the tube. </p>
+								<span class="image featured"><img src="images/calibration results.png" alt="" /></span>
+								<p>The calibration factor that relates the counts per minute to the micorSieverts per hour dose reading is then calculated by comparing the measured value of the counts per minute to the expected effective dose rate at this distance.</p>
 								
-								<span class="image featured"><img src="images/hackster.png" alt="" /></span>
 							</article>
 
 					</div>
