@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Hackaday and Hackster featured my project</title>
+		<title>Wall-E</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -83,21 +83,30 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">Hackaday blog and Hackster.io featured my project!</a></h2>
-										<p>The GC-01, aka the precursor to the commercial GC-20.</p>
+										<h2><a href="#">WALL-E</a></h2>
+										<p>An autonomous rover deployed from a rocket that can drive around avoiding obstacles, flip itself over if turned upside down, and collect soil samples in its wheels.</p>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2019-09-25">September 25, 2019</time>
 										<a href="#" class="author"><span class="name">Prabhat</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
-								<span class="image featured"><img src="images/hackaday_article.png" alt="" /></span>
-								<p>I posted an instructable about the original GC-01 Geiger counter, which apparently got popular enough that the editors of these two popular maker blogs found it! </p>
-								<p>The GC-01 was much larger, shaped differently, and didn't have things like data logging and wifi, but it was my first attempt at building a handheld device, and taught me a lot about PCB design, schematic capture, and most importantly, the design and dimensioning of a product case.</p>
-								<p>Here is the link to the <a href="https://hackaday.com/2019/08/19/diy-geiger-counter-is-sure-to-generate-clicks/">Hackaday article</a></p>
-								<p>And here is the <a href="https://www.hackster.io/news/diy-geiger-counter-with-esp8266-e8fc26f72c31">hackster.io blog post!</a></p>
-								
-								<span class="image featured"><img src="images/hackster.png" alt="" /></span>
+								<span class="image featured"><img src="images/rover_assembly.jpg" alt="" /></span>
+								<p>Wall-E was developed as part of the NASA Student Launch competition for the 2018-19 season. Being the lead payload engineer, I led the development, testing and integration of the hardware and software for the rover and the deployment system. The image above shows the rover and its deployment system ready to be installed into the rocket before launch.</p>
+								<p>The NASA challenge called for a rover that can drive autonomously, and pick up 10 ml of soil sample near the landing site of the rocket. It would also need to move at least 10 ft away from the sample collection site on its own. For the soil collection mechanism, I decided on a pair of excavator wheels with internal flaps so that the rover could collect soil by simply driving backwards</p>
+								<span class="image featured"><img src="images/tetris.jpg" alt="" /></span>
+								<p>An open-frame design was chosen due to its relative simplicity ease of assembly. A single-piece chassis design allowed the bulk of the frame to be 3D printed out of nylon in one piece. Two geared DC motors provided power, and turning was achieved through differential motor speed. For obstacle avoidance, an ultrasonic sensor mounted on a servo motor scanned the area in fornt of the rover while driving.</p>
+								<span class="image featured"><img src="images/arm deployed.jpg" alt="" /></span>
+								<p>The deployable arm served two purposes; one was to flip the rover if deployed upside down - using readings from an accelerometer to determine orientation, and the other purpose was to dig into the ground in front while collecting soil by turning the wheels in reverse. </p>
+								<span class="image featured"><img src="images/PCB.JPG" alt="" /></span>
+								<p>A custom PCB was designed to house all the electronics. This includes an Arduino Nano, a motor driver, an accelerometer breakout board, and a LoRa transceiver to communicate with the ground station.</p>
+								<span class="image featured"><img src="images/Rover Schematic.png" alt="" /></span>
+								<p>Wall-E was retained in the rocket during launch and landing using a custom-designed bulkhead that housed a stepper motor connected to a lead screw, and a nylon guide rod. The lead screw was used to deploy the rover after landing, and the guide rod ensured that the deployment happened smoothly.</p>
+								<span class="image featured"><img src="images/rover retention.PNG" alt="" /></span>
+								<p>The image below shows the assembly after a ground test of the black powder-based separation system used to deploy the parachutes. The rover and the deployment mechanism are a little toasty, but both survived the test just fine!</p>
+								<span class="image featured"><img src="images/toasty.jpg" alt="" /></span>
+								<span class="image featured"><img src="images/rover drawing.PNG" alt="" /></span>
+								<span class="image featured"><img src="images/inside rocket.jpg" alt="" /></span>
 							</article>
 
 					</div>
