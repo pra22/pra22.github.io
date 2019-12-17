@@ -93,13 +93,19 @@
 								</header>
 								
 								<p>For the final project of my Mechatronics class, we were tasked with creating a device with real-world usefulness that incorporated sensors and actuators controlled by a bare microcontroller chip (such as the ATMEGA 328). My team partner and I decided to design and build a device that could cut and dispense programmable lengths and number of wire for anyone working in an electrical or computer lab who needs specific lengths of stranded core wire for breadboarding or other uses. </p>
+								
 								<span class="image featured"><img src="images/wire_cutter_collage.jpg" alt="" /></span>
-								<p>We decided on a system that includes two stepper motors - one to feed the desired length of wire, and the other to cut the wire using a standard wire cutter. The whole assembly would be mounted on a laser-cut piece of MDF board.</p>
+								<p>The wire cutter is designed to be able to cut user-specified lengths and amounts of electronic wire from a spool with the goal of saving valuable time during laboratory experiments or prototyping. The design consists of two NEMA 17 - size stepper motors with the required mechanisms for feeding and cutting the wire, a 2.4” LCD touchscreen display, and a photoresistor which functions as a wire runout sensor. An image of the assembled project is shown below. </p>
+								<span class="image featured"><img src="images/wirecutter.png" alt="" /></span>
+								<p>The base of the device is constructed out of MDF board that is laser cut. The spool holder is 3d printed, as is the bracket to hold the wire cutter, and the housing for the wire runout sensor. The electronic circuit is constructed on breadboards and connected with jumper wires. The three breadboards house the microcontroller circuit, the two motor drivers, and the display respectively.</p>
+								<p>The operation of the wire cutter is illustrated by the flowchart below.</p>
+								<span class="image featured"><img src="images/flowchart.png" alt="" /></span>
+								<p>The circuit schematic is shown below.</p>
+								<span class="image featured"><img src="images/wire_cutter_schematic.png" alt="" /></span>
+								<p>The schematic consists of the minimal Atmega328P circuit onto which other components are attached. The electronic components include two stepper motor drivers, an LED, a photoresistor, and a color TFT display. Power is provided by either a LiPo battery or a wall power supply. All components shared a common ground. This schematic was intended to be used to design a PCB layout before the design is sent to be fabricated. For the final design, we actually just used a breadboard to wire the circuit. </p>
+								<p>Below are some CAD renders of the project</p>
 								<span class="image featured"><img src="images/project.JPG" alt="" /></span>
 								<span class="image featured"><img src="images/project_rear.JPG" alt="" /></span>
-								<p>The electronic schematic for the project is shown below. It includes an ATMEGA 328P microcontroller, two motor drivers, and an SPI TFT touchscreen for the user interface. There were originally plans to house the electronics in a custom PCB, but this could not happen due to time constraints.</p>
-								<span class="image featured"><img src="images/wire_cutter_schematic.png" alt="" /></span>
-								<p><a href="https://github.com/pra22/Automatic-Wire-Cutter">Here</a> is a link to the GitHub page for this project where you can find the code that controls the whole thing and draws the GUI on the touchscreen display.</p>
 							</article>
 
 					</div>
